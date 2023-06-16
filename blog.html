@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/9e9b62f1c2.js" crossorigin="anonymous"></script>
+
+    <title>Blog</title>
+</head>
+
+<body class="container mx-auto">
+    <h1 class="text-center text-3xl font-bold text-green-700">BLOG</h1>
+    <a href="./index.html"><i id="back-btn" class="fa-solid fa-left-long"></i></a>
+    <div class="container mx-auto">
+
+        <!-- Difference between Map,filter,ForEach and Find start -->
+        <h5 class="text-xl font-bold my-5 text-yellow-900">
+            1. Difference between Map,filter,ForEach and Find
+        </h5>
+
+
+        <table class="border-separate border border-slate-500 ...">
+            <thead>
+                <tr>
+                    <th class="border border-slate-600 ...">Map</th>
+                    <th class="border border-slate-600 ...">ForEach</th>
+                    <th class="border border-slate-600 ...">filter</th>
+                    <th class="border border-slate-600 ...">Find</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="border border-slate-700 ...">produces a new array with the results of calling the
+                        specified function on each member in the called array.</td>
+                    <td class="border border-slate-700 ...">For each array element, the supplied function is executed
+                        once.</td>
+                    <td class="border border-slate-700 ...">The filter() function is used to filter all of the items and
+                        returns the element that matches while removing the elements that do not match.</td>
+                    <td class="border border-slate-700 ...">The find() function is used to locate all descendent
+                        elements of the currently chosen element. It locates the element in the DOM tree by traversing
+                        from root to leaf.</td>
+                </tr>
+                <tr>
+                    <td class="border border-slate-700 ...">map is a method that, like callback, accepts a callback
+                        function and returns a new array with the same number of entries as the original array.</td>
+                    <td class="border border-slate-700 ...">forEach is a method that accepts a callback function and
+                        calls it once for each array element.</td>
+                    <td class="border border-slate-700 ...">A filter method returns a new array containing all of the
+                        original array's items that fulfill a specific criterion.</td>
+                    <td class="border border-slate-700 ...">The find function retrieves the first member of an array
+                        that meets a particular criterion.</td>
+                </tr>
+                <tr>
+                    <td class="border border-slate-700 ...">The map function transforms each element of an array and
+                        returns a new array with the modified values.</td>
+                    <td class="border border-slate-700 ...">forEach is a function that performs an operation on each
+                        array element.</td>
+                    <td class="border border-slate-700 ...">The filter function generates a new array containing all
+                        entries that fulfill a criterion.</td>
+                    <td class="border border-slate-700 ...">The find function is used to return the first element that
+                        meets a criterion.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- Difference between Map,filter,ForEach and Find end -->
+
+
+    <!-- difference between local storage, session storage and cookies start -->
+    <h5 class="text-xl font-bold my-5 text-yellow-900">
+        2. difference between local storage, session storage and cookies
+    </h5>
+    <table class="border-separate border border-slate-500 ...">
+        <thead>
+            <tr>
+                <th class="border border-slate-600 ...">local storage</th>
+                <th class="border border-slate-600 ...">session storage</th>
+                <th class="border border-slate-600 ...">cookies</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="border border-slate-700 ...">Local storage is a method of storing client-side data that
+                    survives even after the web window is closed. The method is a key-value pair storage technique that
+                    uses strings to store information.</td>
+                <td class="border border-slate-700 ...">Session storage is a method of storing data on the client side
+                    that lasts only as much as the browsers window or tab is open. It, like local storage, is a
+                    key-value pair storage method that saves data as strings.</td>
+                <td class="border border-slate-700 ...">Each HTTP request includes the transmission of a cookie, which
+                    is a short text file saved just on client and sent to the server. User preferences, session data, as
+                    well as other data can all be stored in cookies.</td>
+            </tr>
+
+            <tr>
+                <td class="border border-slate-700 ...">Local storage has a capacity of 5MB/10MB.</td>
+                <td class="border border-slate-700 ...">Session storage has a capacity of 5MB.</td>
+                <td class="border border-slate-700 ...">Cookies have a storage capacity of 4KB.</td>
+            </tr>
+
+            <tr>
+                <td class="border border-slate-700 ...">It can only be eliminated manually or using javascript because
+                    it is not session-based.</td>
+                <td class="border border-slate-700 ...">It functions per window or tab and is session-based. Data is
+                    only kept in this manner for the length of a session, or until the browser (or tab) is closed.</td>
+                <td class="border border-slate-700 ...">According to the settings and operations for each tab and
+                    window, cookies expire.</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- difference between local storage, session storage and cookies end -->
+    <h5 class="text-xl font-bold my-5 text-yellow-900">
+        3. what is event loop and how is it work?
+    </h5>
+    <div class="border-2 border-black p-2">
+
+        <p> <span class="font-bold">Event-Loop:</span> The concurrency paradigm of JavaScript, which enables the
+            language to handle numerous activities concurrently
+            without obstructing the execution of other processes, is fundamentally based on the event loop.
+
+        </p>
+        <p>
+            An ongoing process known as the event loop in JavaScript listens for events like user input, network
+            requests,
+            and timer events and processes them in the order they are received. An event is added to the "task queue"
+            when
+            it takes place. The task queue is continually checked by the event loop for any pending tasks, which are
+            then
+            carried out one by one in the order they were received.
+        </p>
+        <p><span class="font-bold">Work Process:</span></p>
+        <ul class="list-outside ...">
+            <li>1. The primary thread of execution begins running the code and synchronously carrying out each function
+                one at a time. Functions are added to the call stack as they are invoked.</li>
+            <li>2. The related callback function is registered with the event loop and added to a task queue whenever an
+                asynchronous event takes place, such as a user pushing a button, a network request concluding, or a
+                timer ending. The event loop waits until the call stack is empty before executing the callback function.
+            </li>
+            <li>3. The task queue is continually checked by the event loop for unfinished work. The event loop pulls the
+                first job from the task queue and pushes its callback function onto the call stack, where it is
+                performed, when the call stack is empty.</li>
+            <li>4. The event loop keeps processing asynchronous tasks as they are added to the task queue one at a time,
+                always waiting for the call stack to be empty before moving on to the next job.</li>
+            <li>5. The event loop keeps checking the task queue for new tasks after a function has completed running by
+                removing it from the call stack.</li>
+        </ul>
+        <p>The event loop allows JavaScript to handle asynchronous activities effectively by continually monitoring a
+            task queue for outstanding jobs and executing their associated callback functions in a non-blocking,
+            single-threaded manner.</p>
+    </div>
+    <!-- function question  -->
+    <h5 class="text-xl font-bold my-5 text-yellow-900">
+        4. quizTimer Function & chooseQuiz Function work
+    </h5>
+    <div class="border-2 border-black my-4 p-2">
+        <ul><span class="font-bold">quizTimer Function: </span>
+            <li class="my-1">This code establishes the "quizTimer" function, which accepts the "dismiss" option. The
+                method changes
+                the timer shown on the HTML page and sets an interval that runs every 1000 milliseconds (1 second).
+            </li>
+
+            <li class="my-1">
+                The timer's minutes and seconds are calculated by the code within the interval, which also updates the
+                HTML element with the current timer value and changes the color of the displayed text depending on
+                whether the timer has reached or beyond 60 seconds.
+            </li>
+            <li class="my-1">
+                The function clears the interval and ends the timer if the "dismiss" option is given as true. When the
+                timer is no longer required, you may use this to turn it off.
+            </li>
+
+        </ul>
+        <p><span class="font-bold">chooseQuiz Function: </span>
+        <ul>
+            <li class="my-1"> The aim of this code is to define the "chooseQuiz"function, which has two inputs: "index"
+                and
+                "givenAns".The "answers" array, which contains answers to individual quiz questions, is updated or added
+                to by the
+                function.</li>
+            <li class="my-1">
+                The find method is used to first determine whether the quiz question has previously been answered in the
+                "answers" array. If it is present, the function finds its index in the "answers" array and modifies the
+                provided answer for that quiz question by substituting a new object with the modified "givenAns"
+                attribute.
+            </li>
+            <li class="my-1">
+                The code appends a new object containing the quiz question and the provided response to the end of the
+                "answers" array if the quiz question does not already exist in the "answers" array.
+            </li>
+            <li class="my-1"> The modified "answers" array is sent as an input to another method called
+                "displayAnswers," which
+                displays the answers for the user.</li>
+        </ul>
+        </p>
+    </div>
+</body>
+
+</html>
